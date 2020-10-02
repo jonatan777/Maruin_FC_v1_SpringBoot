@@ -1,0 +1,34 @@
+version: "3.3"
+
+networks:
+  frontend:
+    ipam:
+      config:
+        - subnet: 172.20.0.0/24
+
+services:
+    db:
+      image: mysql
+      command: --default-authentication-plugin=mysql_native_password
+      container_name: mysql_pelada-container-server
+      restart: always
+      environment:
+             MYSQL_ROOT_PASSWORD: jonatan
+             mysql_DATABASE: pelada
+             MYSQL_USER: root
+             MYSQL_PASSWORD: jonatan
+      volumes:
+          - ./DB/db_pelada:/var/lib/mysql       
+      ports:
+          - 3306:3306
+      networks:
+            frontend:
+                ipv4_address: 172.20.0.2
+    backend_java:
+      build: "./PeladaMaruin"
+      container_name: springboot-container                        
+      ports:
+         - 8080:8080
+      depends_on: 
+         - db
+      

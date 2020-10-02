@@ -1,0 +1,593 @@
+<!doctype html>
+<html lang="pt-br" xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layout/layout.html}">
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" type="text/css" media="all" 
+          href="../../css/escalacao.css" th:href="@{/css/escalacao.css}"/>
+                                 <script>
+
+										function allowDrop(ev) {
+											ev.preventDefault();
+										}
+
+										function drag(ev) {
+											ev.dataTransfer.setData("text",
+													ev.target.id);
+										}
+
+										function drop(ev) {
+											ev.preventDefault();
+											var data = ev.dataTransfer
+													.getData("text");
+											ev.target.appendChild(document
+													.getElementById(data));
+										}
+									</script>
+</head>
+
+<body>
+<div layout:fragment="content">
+    <section class="my-5">
+        <div class="container" align="center">
+  
+ <br></br>
+ <br></br>
+ <br></br>
+ <br></br>
+ <!-- ----------------------------------------- menu ------------------------------------------------------->           
+  
+<div class="menu" align="center">
+
+      <h3>Escalação</h3>
+
+         <br></br>
+         
+
+      <h3>pelada do dia:</h3>
+        <h4 align="center">12/07/2020</h4> 
+         
+     <h3 align="center">Rodada: 14</h3>
+         
+         <h3 align="center">JUIZ:</h3>
+      
+         <h3>Pelé</h3>
+
+             
+
+
+            <br></br>
+            <br></br>
+         <h3 align="center">PLACAR:</h3>
+        <h1 align="center">6 X 5</h1>
+
+ </div>
+ <!-- ---------------------------------------------------------------------------------------------------------->           
+  
+  
+ <div class='container' align="center"  id="principal">
+
+			<!-- ------------------------------------------  time 1  ------------------------------------------------------->
+			<div class="time1" ondrop="drop(event)" ondragover="allowDrop(event)">
+				<h3 id="t">
+					Capitão &nbsp;&nbsp;<img src="/img/andre.png" draggable="true"
+						ondragstart="drag(event)" id="drag1" class="rounded-circle"
+						width="80" height="80">
+				</h3>
+				<h3 id="t">time 1</h3>
+
+				<div class="container">
+
+
+					<div class='container' id="ataque">
+						<div id="div1" class="row" ondrop="drop(event)"
+							ondragover="allowDrop(event)">
+							<div class="col-2" ondrop="drop(event)"
+								ondragover="allowDrop(event)"></div>
+							<div class="col-2" ondrop="drop(event)"
+								ondragover="allowDrop(event)"></div>
+							<div class="col-2" ondrop="drop(event)"
+								ondragover="allowDrop(event)">
+								<img src="/img/andre.png" draggable="true"
+									ondragstart="drag(event)" id="drag1" class="rounded-circle"
+									width="80" height="80">atacante
+							</div>
+							<div class="col-2" ondrop="drop(event)"
+								ondragover="allowDrop(event)">
+								<img src="/img/andre.png" draggable="true"
+									ondragstart="drag(event)" id="drag1" class="rounded-circle"
+									width="80" height="80">atacante
+							</div>
+							<div class="col-2" ondrop="drop(event)"
+								ondragover="allowDrop(event)"></div>
+							<div class="col-2" ondrop="drop(event)"
+								ondragover="allowDrop(event)"></div>
+						</div>
+					</div>
+
+					<div class='container' id="meiocampo">
+
+						<div id="div1" class="row" ondrop="drop(event)"
+							ondragover="allowDrop(event)">
+							<div class="col-2"></div>
+							<div class="col-2">
+								<img src="/img/andre.png" draggable="true"
+									ondragstart="drag(event)" id="drag1" class="rounded-circle"
+									width="80" height="80">meio campo
+							</div>
+							<div class="col-2"></div>
+							<div class="col-2"></div>
+							<div class="col-2">
+								<img src="/img/andre.png" draggable="true"
+									ondragstart="drag(event)" id="drag1" class="rounded-circle"
+									width="80" height="80">meio campo
+							</div>
+							<div class="col-2"></div>
+						</div>
+					</div>
+
+
+					<div class='container' id="volante">
+
+						<div id="div1" class="row" ondrop="drop(event)"
+							ondragover="allowDrop(event)">
+							<div class="col-2"></div>
+							<div class="col-2"></div>
+							<div class="col-2">
+								<img src="/img/andre.png" draggable="true"
+									ondragstart="drag(event)" id="drag1" class="rounded-circle"
+									width="80" height="80">volante
+							</div>
+							<div class="col-2">
+								<img src="/img/andre.png" draggable="true"
+									ondragstart="drag(event)" id="drag1" class="rounded-circle"
+									width="80" height="80">volante
+							</div>
+							<div class="col-2"></div>
+							<div class="col-2"></div>
+						</div>
+					</div>
+
+
+
+					<div class='container' id="lateral">
+
+						<div id="div1" class="row" ondrop="drop(event)"
+							ondragover="allowDrop(event)">
+							<div class="col-2"></div>
+							<div class="col-2">
+								<img src="/img/andre.png" draggable="true"
+									ondragstart="drag(event)" id="drag1" class="rounded-circle"
+									width="80" height="80">lateral
+							</div>
+							<div class="col-2"></div>
+							<div class="col-2"></div>
+							<div class="col-2">
+								<img src="/img/andre.png" draggable="true"
+									ondragstart="drag(event)" id="drag1" class="rounded-circle"
+									width="80" height="80">lateral
+							</div>
+							<div class="col-2"></div>
+						</div>
+					</div>
+
+
+					<div class='container' id="defesa">
+
+						<div id="div1" class="row" ondrop="drop(event)"
+							ondragover="allowDrop(event)">
+							<div class="col-2"></div>
+							<div class="col-2"></div>
+							<div class="col-2">
+								<img src="/img/andre.png" draggable="true"
+									ondragstart="drag(event)" id="drag1" class="rounded-circle"
+									width="80" height="80"> defesa
+							</div>
+							<div class="col-2">
+								<img src="/img/andre.png" draggable="true"
+									ondragstart="drag(event)" id="drag1" class="rounded-circle"
+									width="80" height="80"> defesa
+							</div>
+							<div class="col-2"></div>
+							<div class="col-2"></div>
+						</div>
+					</div>
+
+
+					<div class='container' id="goleiro">
+
+						<div id="div1" class="row" ondrop="drop(event)"
+							ondragover="allowDrop(event)">
+							<div class="col-12">
+								<img src="/img/andre.png" draggable="true"
+									ondragstart="drag(event)" id="drag1" class="rounded-circle"
+									width="80" height="80"> goleiro
+							</div>
+						</div>
+					</div>
+
+					<div class="container" id="reservas">
+						<h3>reservas:</h3>
+
+							<div class="col-12">
+
+								<img src="/img/andre.png" draggable="true" ondragstart="drag(event)" id="drag1" class="rounded-circle" width="80" height="80">
+							    <img src="/img/andre.png" draggable="true" ondragstart="drag(event)" id="drag1" class="rounded-circle" width="80" height="80">
+							    <img src="/img/andre.png" draggable="true" ondragstart="drag(event)" id="drag1" class="rounded-circle" width="80" height="80">
+							    
+							</div>
+						</div>
+					</div>
+					
+					<br></br>
+					<br></br>
+
+					<div class="container" id="gols">
+						<h3>golsː</h3>
+
+
+						<div id="div1" class="row" ondrop="drop(event)"
+							ondragover="allowDrop(event)">
+							<div class="col-2">
+								<h3>1</h3>
+								<img src="/img/andre.png" draggable="true"
+									ondragstart="drag(event)" id="drag1" class="rounded-circle"
+									width="80" height="80">
+							</div>
+							<div class="col-2">
+								<h3>2</h3>
+								<img src="/img/andre.png" draggable="true"
+									ondragstart="drag(event)" id="drag1" class="rounded-circle"
+									width="80" height="80">
+							</div>
+							<div class="col-2">
+								<h3>4</h3>
+								<img src="/img/andre.png" draggable="true"
+									ondragstart="drag(event)" id="drag1" class="rounded-circle"
+									width="80" height="80">
+							</div>
+							<div class="col-2">
+								<h3>5</h3>
+								<img src="/img/andre.png" draggable="true"
+									ondragstart="drag(event)" id="drag1" class="rounded-circle"
+									width="80" height="80">
+							</div>
+							<div class="col-2">
+								<h3>6</h3>
+								<img src="/img/andre.png" draggable="true"
+									ondragstart="drag(event)" id="drag1" class="rounded-circle"
+									width="80" height="80">
+							</div>
+							<div class="col-2">
+								<h3>7</h3>
+								<img src="/img/andre.png" draggable="true"
+									ondragstart="drag(event)" id="drag1" class="rounded-circle"
+									width="80" height="80">
+							</div>
+						</div>
+
+					</div>
+					
+					<br></br>
+					<br></br>
+
+
+
+					<div class="container" id="espulsao">
+						<h3>expulsao</h3>
+
+						<div id="div1" class="row" ondrop="drop(event)"
+							ondragover="allowDrop(event)">
+							<div class="col-2">
+
+								<img src="/img/andre.png" draggable="true"
+									ondragstart="drag(event)" id="drag1" class="rounded-circle"
+									width="80" height="80">
+							</div>
+							<div class="col-2">
+
+								<img src="/img/andre.png" draggable="true"
+									ondragstart="drag(event)" id="drag1" class="rounded-circle"
+									width="80" height="80">
+							</div>
+							<div class="col-2">
+
+								<img src="/img/andre.png" draggable="true"
+									ondragstart="drag(event)" id="drag1" class="rounded-circle"
+									width="80" height="80">
+							</div>
+							<div class="col-2">
+
+								<img src="/img/andre.png" draggable="true"
+									ondragstart="drag(event)" id="drag1" class="rounded-circle"
+									width="80" height="80">
+							</div>
+							<div class="col-2">
+
+								<img src="/img/andre.png" draggable="true"
+									ondragstart="drag(event)" id="drag1" class="rounded-circle"
+									width="80" height="80">
+							</div>
+							<div class="col-2">
+
+								<img src="/img/andre.png" draggable="true"
+									ondragstart="drag(event)" id="drag1" class="rounded-circle"
+									width="80" height="80">
+							</div>
+						</div>
+
+					</div>
+
+
+
+
+
+
+				</div>
+			</div>
+			<!-- ------------------------------------------------------------------------------------------------------------>
+
+
+			<!-------------------------------------------------  time 2 ----------------------------------------------------->
+
+
+			<div class="time2" ondrop="drop(event)" ondragover="allowDrop(event)">
+				<h3 id="t">
+					Capitão &nbsp;&nbsp;<img src="/img/andre.png" draggable="true"
+						ondragstart="drag(event)" id="drag1" class="rounded-circle"
+						width="80" height="80">
+				</h3>
+				<h3 id="t">time 2</h3>
+				<div class="container">
+
+
+					<div class='container' id="ataque">
+						<div id="div1" class="row" ondrop="drop(event)"
+							ondragover="allowDrop(event)">
+							<div class="col-2" ondrop="drop(event)"
+								ondragover="allowDrop(event)"></div>
+							<div class="col-2" ondrop="drop(event)"
+								ondragover="allowDrop(event)"></div>
+							<div class="col-2" ondrop="drop(event)"
+								ondragover="allowDrop(event)">
+								<img src="/img/andre.png" draggable="true"
+									ondragstart="drag(event)" id="drag1" class="rounded-circle"
+									width="80" height="80">atacante
+							</div>
+							<div class="col-2" ondrop="drop(event)"
+								ondragover="allowDrop(event)">
+								<img src="/img/andre.png" draggable="true"
+									ondragstart="drag(event)" id="drag1" class="rounded-circle"
+									width="80" height="80">atacante
+							</div>
+							<div class="col-2" ondrop="drop(event)"
+								ondragover="allowDrop(event)"></div>
+							<div class="col-2" ondrop="drop(event)"
+								ondragover="allowDrop(event)"></div>
+						</div>
+					</div>
+
+					<div class='container' id="meiocampo">
+
+						<div id="div1" class="row" ondrop="drop(event)"
+							ondragover="allowDrop(event)">
+							<div class="col-2"></div>
+							<div class="col-2">
+								<img src="/img/andre.png" draggable="true"
+									ondragstart="drag(event)" id="drag1" class="rounded-circle"
+									width="80" height="80">meio campo
+							</div>
+							<div class="col-2"></div>
+							<div class="col-2"></div>
+							<div class="col-2">
+								<img src="/img/andre.png" draggable="true"
+									ondragstart="drag(event)" id="drag1" class="rounded-circle"
+									width="80" height="80">meio campo
+							</div>
+							<div class="col-2"></div>
+						</div>
+					</div>
+
+
+					<div class='container' id="volante">
+
+						<div id="div1" class="row" ondrop="drop(event)"
+							ondragover="allowDrop(event)">
+							<div class="col-2"></div>
+							<div class="col-2"></div>
+							<div class="col-2">
+								<img src="/img/andre.png" draggable="true"
+									ondragstart="drag(event)" id="drag1" class="rounded-circle"
+									width="80" height="80">volante
+							</div>
+							<div class="col-2">
+								<img src="/img/andre.png" draggable="true"
+									ondragstart="drag(event)" id="drag1" class="rounded-circle"
+									width="80" height="80">volante
+							</div>
+							<div class="col-2"></div>
+							<div class="col-2"></div>
+						</div>
+					</div>
+
+
+
+					<div class='container' id="lateral">
+
+						<div id="div1" class="row" ondrop="drop(event)"
+							ondragover="allowDrop(event)">
+							<div class="col-2"></div>
+							<div class="col-2">
+								<img src="/img/andre.png" draggable="true"
+									ondragstart="drag(event)" id="drag1" class="rounded-circle"
+									width="80" height="80">lateral
+							</div>
+							<div class="col-2"></div>
+							<div class="col-2"></div>
+							<div class="col-2">
+								<img src="/img/andre.png" draggable="true"
+									ondragstart="drag(event)" id="drag1" class="rounded-circle"
+									width="80" height="80">lateral
+							</div>
+							<div class="col-2"></div>
+						</div>
+					</div>
+
+
+					<div class='container' id="defesa">
+
+						<div id="div1" class="row" ondrop="drop(event)"
+							ondragover="allowDrop(event)">
+							<div class="col-2"></div>
+							<div class="col-2"></div>
+							<div class="col-2">
+								<img src="/img/andre.png" draggable="true"
+									ondragstart="drag(event)" id="drag1" class="rounded-circle"
+									width="80" height="80"> defesa
+							</div>
+							<div class="col-2">
+								<img src="/img/andre.png" draggable="true"
+									ondragstart="drag(event)" id="drag1" class="rounded-circle"
+									width="80" height="80"> defesa
+							</div>
+							<div class="col-2"></div>
+							<div class="col-2"></div>
+						</div>
+					</div>
+
+
+					<div class='container' id="goleiro">
+
+						<div id="div1" class="row" ondrop="drop(event)"
+							ondragover="allowDrop(event)">
+							<div class="col-12">
+								<img src="/img/andre.png" draggable="true"
+									ondragstart="drag(event)" id="drag1" class="rounded-circle"
+									width="80" height="80"> goleiro
+							</div>
+						</div>
+					</div>
+					
+					
+					<div class="container" id="reservas">
+						<h3>reservas:</h3>
+                       <div class="col-12">
+
+							<img src="/img/andre.png" draggable="true" ondragstart="drag(event)" id="drag1" class="rounded-circle" width="80" height="80">
+							<img src="/img/andre.png" draggable="true" ondragstart="drag(event)" id="drag1" class="rounded-circle" width="80" height="80">
+							<img src="/img/andre.png" draggable="true" ondragstart="drag(event)" id="drag1" class="rounded-circle" width="80" height="80">
+							    
+						</div>
+						
+					</div>
+					
+					<br></br>
+					<br></br>
+
+					<div class="container" id="gols">
+						<h3>golsː</h3>
+
+
+						<div id="div1" class="row" ondrop="drop(event)"
+							ondragover="allowDrop(event)">
+							<div class="col-2">
+								<h3>1</h3>
+								<img src="/img/andre.png" draggable="true"
+									ondragstart="drag(event)" id="drag1" class="rounded-circle"
+									width="80" height="80">
+							</div>
+							<div class="col-2">
+								<h3>1</h3>
+								<img src="/img/andre.png" draggable="true"
+									ondragstart="drag(event)" id="drag1" class="rounded-circle"
+									width="80" height="80">
+							</div>
+							<div class="col-2">
+								
+							</div>
+							<div class="col-2">
+								
+							</div>
+							<div class="col-2">
+								
+							</div>
+							<div class="col-2">
+								
+							</div>
+						</div>
+
+					</div>
+					
+					<br></br>
+					<br></br>
+
+
+
+					<div class="container" id="espulsao">
+						<h3>expulsao</h3>
+
+						<div id="div1" class="row" ondrop="drop(event)"
+							ondragover="allowDrop(event)">
+							<div class="col-2">
+
+								<img src="/img/andre.png" draggable="true"
+									ondragstart="drag(event)" id="drag1" class="rounded-circle"
+									width="80" height="80">
+							</div>
+							<div class="col-2">
+
+								<img src="/img/andre.png" draggable="true"
+									ondragstart="drag(event)" id="drag1" class="rounded-circle"
+									width="80" height="80">
+							</div>
+							<div class="col-2">
+
+								<img src="/img/andre.png" draggable="true"
+									ondragstart="drag(event)" id="drag1" class="rounded-circle"
+									width="80" height="80">
+							</div>
+							<div class="col-2">
+
+								<img src="/img/andre.png" draggable="true"
+									ondragstart="drag(event)" id="drag1" class="rounded-circle"
+									width="80" height="80">
+							</div>
+							<div class="col-2">
+
+								<img src="/img/andre.png" draggable="true"
+									ondragstart="drag(event)" id="drag1" class="rounded-circle"
+									width="80" height="80">
+							</div>
+							<div class="col-2">
+
+								<img src="/img/andre.png" draggable="true"
+									ondragstart="drag(event)" id="drag1" class="rounded-circle"
+									width="80" height="80">
+							</div>
+						</div>
+
+					</div>
+
+
+
+
+				</div>
+			</div>
+
+			<!---------------------------------------------------------------------------------------->
+           
+                  
+  </div>
+  
+  
+
+ 
+  
+  
+ </section>  
+  </div>                  
+</body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org">
+	
+<head>
+<meta charset="UTF-8" />
+<title>Detalhe do Jogador</title>
+</head>
+
+<body>
+	<div align="center">
+		<h1>Detalhe do Jogador</h1>
+		<br />
+		<form action="#" th:action="@{/save}" th:object="${jogadores}"
+			method="post">
+
+			<table border="0" cellpadding="10">
+				<tr>				
+					<td>Jogador ID:</td>
+					<td>
+						<input type="text" th:field="*{id}" readonly="readonly" />
+					</td>
+				</tr>
+				<tr>
+					<td>Imagens:</td>
+					<td><input type="text" th:field="*{imagen}" /></td>
+				</tr>			
+				<tr>				
+					<td>Jogador Nome:</td>
+					<td><input type="text" th:field="*{nome}" /></td>
+				</tr>
+				<tr>
+					<td>Posicao:</td>
+					<td><input type="text" th:field="*{posicao}" /></td>
+				</tr>
+				<tr>
+					<td>Vitórias:</td>
+					<td><input type="text" th:field="*{vitorias}" /></td>
+				</tr>
+				<tr>
+					<td>Derrotas:</td>
+					<td><input type="text" th:field="*{derrotas}" /></td>
+				</tr>
+				<tr>
+					<td>Empates:</td>
+					<td><input type="text" th:field="*{empates}" /></td>
+				</tr>
+				<tr>
+					<td>Expulsão:</td>
+					<td><input type="text" th:field="*{expulsao}" /></td>
+				</tr>
+				<tr>
+					<td>Jogos:</td>
+					<td><input type="text" th:field="*{jogos}" /></td>
+				</tr>
+				<tr>
+					<td>Pontos:</td>
+					<td><input type="text" th:field="*{pontos}" /></td>
+				</tr>
+				<tr>
+					<td>Gols:</td>
+					<td><input type="text" th:field="*{gols}" /></td>
+				</tr>
+				
+				
+				
+												
+				<tr>
+					<td colspan="2"><button type="submit">Save</button> </td>
+				</tr>
+			</table>
+		</form>
+	</div>
+</body>
+</html>

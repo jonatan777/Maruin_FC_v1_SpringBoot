@@ -1,0 +1,137 @@
+.container_escalacao{
+  margin: 0;
+  padding: 0;
+ max-width:100%;
+ 
+ position: relative;
+    top	:180px;
+    left:0px;
+}
+body{
+  margin: 0;
+  padding: 0;	
+	
+}
+
+.container{
+  margin: 0;
+  padding: 0;
+
+}
+
+#principal{
+	
+	 position: relative;
+    top	:0px;
+    left:129px;
+}
+
+#drag1{
+	
+	margin: 0;
+  padding: 0;
+}
+
+#t{
+position: relative;
+top: -150px;
+margin: 0;
+  padding: 0;	
+}
+
+.menu{
+position: relative;	
+height: 200px;
+width: 30%;
+top: 0px;
+left:100px;
+}
+
+
+.time1{
+	
+height: 600px;
+width: 50%;
+background-image: url(../../img/campo.jpg);
+background-size:500px 600px;
+background-repeat:no-repeat;
+position: relative;
+    top: -200px;
+    left:-350px;
+    
+     margin: 0;
+  padding: 0;
+}
+
+.time2{
+
+height: 600px;
+width: 50%;
+background-image: url(../../img/campo.jpg);
+background-size:500px 600px;
+background-repeat:no-repeat;
+position: relative;
+    top: -800px;
+    left:500px;
+        margin: 0;
+  padding: 0;
+}
+
+
+
+
+#ataque{
+	
+	position: relative;
+    left:-36px;
+    top:-70px;
+     margin: 0;
+  padding: 0;
+}
+
+#meiocampo{
+	
+	position: relative;
+    left:-40px;
+    top:-50px;
+     margin: 0;
+  padding: 0;
+}
+
+
+#volante{
+	
+	position: relative;
+    left:-38px;
+    top:-50px;
+     margin: 0;
+  padding: 0;
+}
+
+
+#lateral{
+	
+	position: relative;
+    left:-35px;
+    top:-80px;
+     margin: 0;
+  padding: 0;
+}
+
+#defesa{
+	
+	position: relative;
+    left:-35px;
+    top:-140px;
+     margin: 0;
+  padding: 0;
+}
+
+#goleiro{
+	
+	position: relative;
+    left:0px;
+    top:-160px;
+     margin: 0;
+  padding: 0;
+}

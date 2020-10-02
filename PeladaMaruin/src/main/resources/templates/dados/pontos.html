@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-br" xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layout/layout.html}">
+<head>
+    <title>Tabela de Pontos</title>
+    
+    <link rel="stylesheet" type="text/css" media="all" href="../../css/pontos.css" th:href="@{/css/pontos.css}"/>
+          
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
+    <script src="../../js/index.js"></script>
+</head>
+
+<body>
+
+<div layout:fragment="content">
+<section class="my-5">
+
+<div id="fundo-externo">
+	<div id="fundo">
+		<img src="/img/img_fundo/galera3.jpg">
+	</div>
+</div>
+
+ 
+     
+  
+			<div class="container" align="center"  id="pontos">
+                    <h1 align="center" id="msg">Classificação de Pontos</h1>
+                    
+ 
+                        
+					<table border="1" id="table">
+						<thead>
+							<tr align='center'>
+							    <th>#</th>
+								<th>Imagem</th>
+								<th>Nome</th>
+								<th>Posição</th>
+								<th>Jogos</th>
+								<th>Vitórias</th>
+								<th>Empates</th>
+								<th>Derrotas</th>
+								<th>Expulsão</th>
+                                <th>Pontos</th>
+								
+							</tr>
+						</thead>
+						
+						<tbody>
+
+							<tr th:each="jogadores, row : ${jogadores}">
+							    <td th:text="${row.count}">#</td>
+								<td align=center><img th:src="${jogadores.imagen}" class="rounded-circle" width="80" height="80" /></td>
+								<td th:text="${jogadores.nome}" align=center>Nome</td>
+								<td th:text="${jogadores.posicao}" align=center>Posição</td>
+								<td th:text="${jogadores.jogos}" align=center>Jogos</td>
+								<td th:text="${jogadores.vitorias}" align=center>Vitórias</td>
+								<td th:text="${jogadores.derrotas}" align=center>Empates</td>
+								<td th:text="${jogadores.empates}" align=center>Derrotas</td>
+								<td th:text="${jogadores.pontos}" align=center>Expulsão</td>
+								<td th:text="${jogadores.expulsao}" align=center>Pontos</td>
+							</tr>
+							
+						</tbody>
+						
+					</table>
+					
+					<br></br>
+						<br></br>
+					
+
+
+			</div>
+
+</section>
+
+
+<footer>
+   <div class="container">
+      <a class="btn btn-primary" href="#" role="button">Voltar</a>
+     &nbsp;&nbsp;<a class="btn btn-primary" href="/" role="button">inicio</a>
+      <br></br>
+      
+      <p>&copy; 2020 Pelada do maruim. todos Direitos Reservados.</p>
+   </div>
+</footer>
+
+
+
+</div>
+
+
+ 	
+				
+
+</body>
+</html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-br" xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layout/layout.html}">
+<head>
+    <title>Gerenciamento dos Dados</title>
+    
+    <link rel="stylesheet" type="text/css" media="all" href="../../css/gerenciar.css" th:href="@{/css/gerenciar.css}"/>
+          
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
+    <script src="../../js/index.js"></script>
+</head>
+
+
+
+
+<body>
+
+<div layout:fragment="content">
+
+    <section class="my-5">
+    
+        <div class="container" align="center" id="gerenciar">             
+        <h1>Gerenciamento de Jogadores</h1>
+  <h3><a href="new">Criar novo Participante</a></h3>
+    <br/><br/>
+    
+    <table border="1">
+        <thead>
+            <tr align='center'>
+                <th>#</th>
+                <th>Imagem</th>
+                <th>Jogador ID</th>
+                <th>Nome</th>
+                <th>Posição</th>
+                <th>Vitórias</th>
+                <th>Derrotas</th>
+                <th>Empates</th>
+                <th>Expulsão</th>
+                <th>Jogos</th>
+                <th>Pontos</th>
+                <th>Gols</th>
+                <th>Gols Sofridos</th>
+                <th>Actions</th>
+            </tr>
+        </thead> 
+        <tbody>
+             
+            
+            
+            <tr th:each="jogadores, row : ${jogadores}">
+						
+						
+  			    
+                <td th:text="${row.count}">#
+							     
+			    </td>
+      
+                <td>
+                <img th:src="${jogadores.imagen}" class="rounded-circle" width="80" height="80"/>
+                </td>
+            	<td th:text="${jogadores.id}" align='center'>Jogador ID</td>
+                <td th:text="${jogadores.nome}" align='center'>Nome</td>
+                <td th:text="${jogadores.posicao}" align='center'>Posição</td>
+                <td th:text="${jogadores.vitorias}" align='center'>Vitórias</td>
+                <td th:text="${jogadores.derrotas}" align='center'>Derrotas</td>
+                <td th:text="${jogadores.empates}" align='center'>Empates</td>
+                <td th:text="${jogadores.expulsao}" align='center'>Expulsão</td>
+                <td th:text="${jogadores.jogos}" align='center'>Jogos</td>
+                <td th:text="${jogadores.pontos}" align='center'>Pontos</td>
+                <td th:text="${jogadores.gols}" align='center'>Gols</td>
+                <td th:text="${jogadores.gols_sofridos}" align='center'>Gols Sofridos</td>
+                <td>
+                	<a th:href="@{'/edit/' + ${jogadores.id}}">Edit</a>
+                	&nbsp;&nbsp;&nbsp;
+                	<a th:href="@{'/delete/' + ${jogadores.id}}">Delete</a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    
+    
+
+         
+        </div>
+    </section>
+    
+    
+
+    
+</div>
+
+</body>
+</html>

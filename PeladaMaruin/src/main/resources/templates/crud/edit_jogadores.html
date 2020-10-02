@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-br" xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layout/layout.html}">
+	
+<head>
+<meta charset="UTF-8" />
+<title>Editar Jogadores</title>
+
+<link rel="stylesheet" type="text/css" media="all" href="../../css/edit.css" th:href="@{/css/edit.css}"/>
+
+</head>
+
+<body>
+
+
+
+<div layout:fragment="content">
+
+<div class="container" id="exemplo_edit">
+
+<h6>Jogador ID:<p>preenchimento automático</p></h6> 
+
+<h6>Imagens:<p>img/img_jogadores/&nbsp;&nbsp;&nbsp;+ nome da imagem</p></h6> 
+     
+</div>
+
+
+	<div align="center" id="formulario">
+		<h1>Editar Jogadores</h1>
+		<br />
+		<form action="#" th:action="@{/save}" th:object="${jogadores}" method="post">
+         
+			<table border="0" cellpadding="10">
+				<tr>				
+					<td>Jogador ID:</td>
+					<td>
+						<input type="text" th:field="*{id}" readonly="readonly" />
+					</td>
+				</tr>
+				<tr>
+					<td>Imagens:</td>
+					<td><input type="text" th:field="*{imagen}" /></td>
+				</tr>			
+				<tr>				
+					<td>Jogador Nome:</td>
+					<td><input type="text" th:field="*{nome}" /></td>
+				</tr>
+				<tr>
+					<td>Posicao:</td>
+					<td><input type="text" th:field="*{posicao}" /></td>
+				</tr>
+				<tr>
+					<td>Vitórias:</td>
+					<td><input type="text" th:field="*{vitorias}" /></td>
+				</tr>
+				<tr>
+					<td>Derrotas:</td>
+					<td><input type="text" th:field="*{derrotas}" /></td>
+				</tr>
+				<tr>
+					<td>Empates:</td>
+					<td><input type="text" th:field="*{empates}" /></td>
+				</tr>
+				<tr>
+					<td>Expulsão:</td>
+					<td><input type="text" th:field="*{expulsao}" /></td>
+				</tr>
+				<tr>
+					<td>Jogos:</td>
+					<td><input type="text" th:field="*{jogos}" /></td>
+				</tr>
+				<tr>
+					<td>Pontos:</td>
+					<td><input type="text" th:field="*{pontos}" /></td>
+				</tr>
+				<tr>
+					<td>Gols:</td>
+					<td><input type="text" th:field="*{gols}" /></td>
+				</tr>
+				<tr>
+					<td>Gols Sofridos:</td>
+					<td><input type="text" th:field="*{gols_sofridos}" /></td>
+				</tr>
+				
+				
+				
+												
+				<tr>
+					<td colspan="2"><button type="submit">Save</button> </td>
+				</tr>
+			</table>
+		</form>
+	</div>
+</div>	
+</body>
+</html>

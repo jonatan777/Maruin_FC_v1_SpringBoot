@@ -1,0 +1,12 @@
+{"properties": [
+  {
+    "name": "lisa.http.timeout.connection",
+    "type": "java.lang.String",
+    "description": "A description for 'lisa.http.timeout.connection'"
+  },
+  {
+    "name": "lisa.http.timeout.socket",
+    "type": "java.lang.String",
+    "description": "A description for 'lisa.http.timeout.socket'"
+  }
+]}

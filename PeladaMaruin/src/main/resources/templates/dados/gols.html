@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-br" xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	layout:decorate="~{layout/layout.html}">
+<head>
+<title>Tabela de Gols</title>
+
+<link rel="stylesheet" type="text/css" media="all" href="../../css/gols.css" th:href="@{/css/gols.css}" />
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
+	      <!-- script do efeito sobre posição de tela  -->
+      <script src="../../js/index.js"></script>
+</head>
+<body>
+
+	<div layout:fragment="content">
+		<section class="my-5">
+
+			<div id="fundo-externo">
+				<div id="fundo">
+					<img src="/img/img_fundo/tabela_goleiro.jpeg">
+				</div>
+			</div>
+
+
+
+
+			<div class="container" align="center" id="container_artilharia">
+                    
+				<h1 align="center" id="msg">Artilharia</h1>
+				
+				<table border="2" id="table">
+					<thead>
+						<tr align="center">
+						    <th>#</th>
+							<th>Imagem</th>
+							<th>Nome</th>
+							<th>Posição</th>
+							<th>Jogos</th>
+							<th>Gols</th>
+						</tr>
+					</thead>
+					<tbody>
+					
+					
+					
+
+						<tr th:each="jogadores, row : ${jogadores}">
+						
+						
+  			    
+                              <td th:text="${row.count}">#
+							     
+			                  </td>
+						
+						
+						
+							<td align=center><img th:src="${jogadores.imagen}" class="rounded-circle"
+								width="80" height="80" /></td>
+							<td th:text="${jogadores.nome}" align=center>Nome</td>
+							<td th:text="${jogadores.posicao}" align=center>Posição</td>
+							<td th:text="${jogadores.jogos}" align=center>Jogos</td>
+							<td th:text="${jogadores.gols}" align=center>Gols</td>
+						</tr>
+					</tbody>
+				</table>
+                <br></br>
+                <br></br>
+			</div>
+		</section>
+
+<footer>
+   <div class="container">
+      <a class="btn btn-primary" href="#" role="button">Voltar</a>
+     &nbsp;&nbsp;<a class="btn btn-primary" href="/" role="button">inicio</a>
+      <br></br>
+      
+      <p>&copy; 2020 Pelada do maruim. todos Direitos Reservados.</p>
+   </div>
+</footer>
+
+
+	</div>
+
+
+</body>
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-br" xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	layout:decorate="~{layout/layout.html}">
+<head>
+<title>Tabela de Gols</title>
+
+<link rel="stylesheet" type="text/css" media="all"
+	href="../../css/goleiros.css" th:href="@{/css/goleiros.css}" />
+
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
+<script src="../../js/index.js"></script>
+</head>
+<body>
+
+	<div layout:fragment="content">
+		<section class="my-5">
+
+			<div id="fundo-externo">
+				<div id="fundo">
+					<img src="/img/img_fundo/galera4.jpg">
+				</div>
+			</div>
+
+
+
+
+			<div class="container" align="center">
+                           
+				<h1 align="center" id="msg">Goleiros Menos Vasados</h1>
+				
+				 <table border="1" id="table">
+        <thead>
+            <tr align="center">
+                <th>#</th>
+                <th align="center">Imagem</th>
+                <th>Nome</th>
+                <th>Posição</th>
+                <th>Jogos</th>
+                <th>Gols Sofridos</th>
+            </tr>
+        </thead> 
+        <tbody>
+             
+             
+             
+            <tr th:each="goleiros, row : ${goleiros}">
+  			    
+               <td th:text="${row.count}">#
+							     
+			   </td>
+            
+            
+                <td align=center>
+                <img th:src="${goleiros.imagen}" class="rounded-circle" width="80" height="80"/>
+               </td>
+              
+                <td th:text="${goleiros.nome}" align=center>Nome</td>
+                <td th:text="${goleiros.posicao}" align=center>Posição</td>
+                <td th:text="${goleiros.jogos}" align=center>Jogos</td>
+                <td th:text="${goleiros.gols_sofridos}" align=center>Gols Sofridos</td>
+            </tr>
+        </tbody>
+    </table>
+
+			</div>
+			
+		</section>
+	
+<footer>
+   <div class="container">
+      <a class="btn btn-primary" href="#" role="button">Voltar</a>
+     &nbsp;&nbsp;<a class="btn btn-primary" href="/" role="button">inicio</a>
+      <br></br>
+      
+      <p>&copy; 2020 Pelada do maruim. todos Direitos Reservados.</p>
+   </div>
+</footer>
+
+	</div>
+
+</body>
+</html>

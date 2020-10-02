@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="pt-br" xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layout/layout.html}">
+
+<head>
+  <meta charset="UTF-8">
+    <title>escalação 2020 - fervereiro</title>
+  
+  <link rel="stylesheet" type="text/css" media="all" href="../../css/janeiro.css" th:href="@{/css/janeiro.css}"/>
+<script>
+function bigImg(x) {
+  x.style.height = "100%";
+  x.style.width = "100%";
+}
+
+function normalImg(x) {
+  x.style.height = "200px";
+  x.style.width = "200px";
+}
+</script>
+
+</head>
+
+
+
+<body>
+ 
+<div layout:fragment="content">
+ 
+ <section class="my-5">
+  
+  <div id="fundo-externo">
+		<div id="fundo">
+		  <img src="/img/img_fundo/galera5.jpg">
+		</div>
+  </div>
+  
+<div class='container' id="janeiro" align="center">
+               
+               
+              <br></br>
+			<br></br>  
+	     <div id="div1" class="row" ondrop="drop(event)" ondragover="allowDrop(event)">
+	         
+			<div class="col-12" ondrop="drop(event)" ondragover="allowDrop(event)">
+			
+			<h1 id="msg">Escalação de Fervereiro</h1>
+			<br></br>
+			<br></br>
+				<img onclick="bigImg(this)" onmouseleave="normalImg(this)" border="0" src="/img/escalacao_ano_2020/fervereiro.02.02.2020.png" draggable="true" ondragstart="drag(event)" id="drag1" class="rounded" alt="Smiley" width="200" height="200">	
+				<h3 id="msg">02/02/2020</h3>
+		    </div>  
+	    </div>
+	    
+		<div id="div1" class="row" ondrop="drop(event)" ondragover="allowDrop(event)">
+	
+			<div class="col-12" ondrop="drop(event)" ondragover="allowDrop(event)">
+				<img onclick="bigImg(this)" onmouseleave="normalImg(this)" border="0" src="/img/escalacao_ano_2020/fervereiro.09.02.2020.png" draggable="true" ondragstart="drag(event)" id="drag1" class="rounded" alt="Smiley" width="200" height="200">	
+				<h3 id="msg">09/02/2020</h3>
+		    </div>  
+	   </div>
+	   
+		<div id="div1" class="row" ondrop="drop(event)" ondragover="allowDrop(event)">
+	
+			<div class="col-12" ondrop="drop(event)" ondragover="allowDrop(event)">
+				<img onclick="bigImg(this)" onmouseleave="normalImg(this)" border="0" src="/img/escalacao_ano_2020/fervereiro.16.02.2020.png" draggable="true" ondragstart="drag(event)" id="drag1" class="rounded" alt="Smiley" width="200" height="200">	
+				<h3 id="msg">16/02/2020</h3>
+		    </div>  
+	   </div>
+	  
+	
+</div>
+ 
+    
+ </section> 
+ 
+ <footer>
+   <div class="container">
+      <a class="btn btn-primary" href="#" role="button">Voltar</a>
+     &nbsp;&nbsp;<a class="btn btn-primary" href="/marco" role="button">março</a>
+      <br></br>
+      
+      <p>&copy; 2020 Pelada do maruim. todos Direitos Reservados.</p>
+   </div>
+</footer> 
+</div> 
+
+                 
+</body>
+</html>

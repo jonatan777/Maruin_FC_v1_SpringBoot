@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-br" xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title layout:title-pattern="$CONTENT_TITLE - $LAYOUT_TITLE"></title> 
+    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    
+    <!-- Bootstrap CSS -->
+  <!------------ <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"> -->
+     <!-- Reset CSS -->
+     <link rel="stylesheet" type="text/css" media="all" 
+          href="../../css/layout.css" th:href="@{/css/layout.css}"/>
+          
+          <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>    
+</head>
+
+
+
+<body>
+
+ 
+<!-- Main Navigation -->
+<header class="header">
+<nav class="navbar navbar-expand-md navbar-dark bg-dark">
+  &nbsp;&nbsp;&nbsp;&nbsp;  <a class="navbar-brand" th:href="@{/}"><img th:src="@{/img/img_fundo/pelada.png}" src="../static/img/img_fundo/pelada.png" class="rounded-circle" width="80" height="80" id="imagem"/></a>&nbsp;&nbsp;&nbsp;&nbsp;<a class="navbar-brand" th:href="@{/}" id="titulo">PELADA DO MARUIM 2020</a> 
+
+
+    <div class="collapse navbar-collapse" id="navbar">
+        
+        <ul class="navbar-nav ml-auto">
+			<li class="nav-item active">
+                <a class="nav-link" th:href="@{/}">INICIO</a>
+            </li>
+            <li class="nav-item dropdown active" id="bloco">
+				        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">ESCALAÇÃO</a>
+					<div class="dropdown-menu">
+						<a class="dropdown-item" href="/janeiro">janeiro</a> 
+						<a class="dropdown-item" href="/fervereiro">fervereiro</a> 
+						<a class="dropdown-item" href="/marco">março</a>
+						<a class="dropdown-item" href="/abril">abril</a>
+						<a class="dropdown-item" href="/maio">maio</a>
+						<a class="dropdown-item" href="/junho">junho</a>
+						<a class="dropdown-item" href="/julho">julho</a>
+						<a class="dropdown-item" href="/agosto">agosto</a>
+						<a class="dropdown-item" href="/setembro">setembro</a>
+						<a class="dropdown-item" href="/outubro">outubro</a>
+						<a class="dropdown-item" href="/novembro">novembro</a>
+						<a class="dropdown-item" href="/dezembro">dezembro</a>
+						<a class="dropdown-item" href="/escalacao">domingo</a>
+					</div>
+			    </li>
+            <li class="nav-item active">
+                <a class="nav-link" th:href="@{/pontos}">PONTOS</a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" th:href="@{/gols}">GOLS</a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" th:href="@{/goleiros}">GOLEIROS</a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" th:href="@{/gerenciar}">LOGIN</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+</header>
+
+
+<!-- Content Section -->
+<section layout:fragment="content">
+    <p>This is filled by the content template.</p>
+</section>
+
+</body>
+</html>
